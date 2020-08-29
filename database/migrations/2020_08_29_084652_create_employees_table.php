@@ -13,16 +13,18 @@ class CreateEmployeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('employees', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->integer('company_id')->unsigned();
-            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('email')->nullable();
-            $table->string('phone')->nullable();
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('employees')) {
+            Schema::create('employees', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('first_name');
+                $table->string('last_name');
+                $table->integer('company_id')->unsigned();
+                $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade')->onUpdate('cascade');
+                $table->string('email')->nullable();
+                $table->string('phone')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
