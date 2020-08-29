@@ -21,5 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/* added by me */
 Route::get('/admin', 'AdminController@admin')->middleware('is_admin')->name('admin');
+
+Route::get('/admin/companies', 'CompaniesController@index')->middleware('is_admin')->name('companies');
+
+Route::get('/admin/companies/create', 'CompaniesController@create')->middleware('is_admin')->name('companies');
