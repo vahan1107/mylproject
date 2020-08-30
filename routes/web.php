@@ -25,4 +25,6 @@ Route::get('/admin', 'AdminController@admin')->middleware('is_admin')->name('adm
 
 Route::get('/admin/companies', 'CompaniesController@index')->middleware('is_admin')->name('companies');
 
-Route::get('/admin/companies/create', 'CompaniesController@create')->middleware('is_admin')->name('companies');
+Route::get('/admin/companies/create', 'CompaniesController@create')->middleware('is_admin')->name('create_companies');
+
+Route::post('/admin/companies/store', 'CompaniesController@store')->middleware('is_admin')->name('store_companies');
