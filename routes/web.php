@@ -28,3 +28,9 @@ Route::get('/admin/companies', 'CompaniesController@index')->middleware('is_admi
 Route::get('/admin/companies/create', 'CompaniesController@create')->middleware('is_admin')->name('create_companies');
 
 Route::post('/admin/companies/store', 'CompaniesController@store')->middleware('is_admin')->name('store_companies');
+
+Route::get('/admin/companies/delete', 'CompaniesController@delete')->middleware('is_admin')->name('delete_companies');
+
+Route::post('/admin/companies/update', 'CompaniesController@update')->middleware('is_admin')->name('update_companies');
+
+Route::post('/admin/companies/save', 'CompaniesController@save')->middleware('is_admin')->name('save_companies');
