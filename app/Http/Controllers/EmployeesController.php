@@ -64,7 +64,7 @@ class EmployeesController extends Controller
     {
         $employees = DB::table('employees')
                     ->leftJoin('companies', 'employees.company_id', '=', 'companies.id')
-                    ->paginate(2, array('employees.*', 'companies.name as c_name', 'companies.website as company_website'));
+                    ->paginate(10, array('employees.*', 'companies.name as c_name', 'companies.website as company_website'));
         return view('employees')->with('employees', $employees);
     }
 }
