@@ -34,3 +34,15 @@ Route::get('/admin/companies/delete', 'CompaniesController@delete')->middleware(
 Route::post('/admin/companies/update', 'CompaniesController@update')->middleware('is_admin')->name('update_companies');
 
 Route::post('/admin/companies/save', 'CompaniesController@save')->middleware('is_admin')->name('save_companies');
+
+Route::get('/admin/employees', 'EmployeesController@index')->middleware('is_admin')->name('employees');
+
+Route::get('/admin/employees/create', 'EmployeesController@create')->middleware('is_admin')->name('create_employees');
+
+Route::post('/admin/employees/store', 'EmployeesController@store')->middleware('is_admin')->name('store_employees');
+
+Route::get('/admin/employees/delete', 'EmployeesController@delete')->middleware('is_admin')->name('delete_employees');
+
+Route::post('/admin/employees/update', 'EmployeesController@update')->middleware('is_admin')->name('update_employees');
+
+Route::post('/admin/employees/save', 'EmployeesController@save')->middleware('is_admin')->name('save_employees');

@@ -60,12 +60,13 @@ class CompaniesController extends Controller
         $company = DB::table('companies')->where('id', $input['c_id']);
         Storage::delete('public/'.$company->first()->logo);
         $company->delete();
+        DB::table('employees')->where('company_id', $input['c_id'])->delete();
         return redirect('admin/companies');
     }
 
     public function index()
     {
-        $companies = DB::table('companies')->paginate(2);
+        $companies = DB::table('companies')->paginate(10);
         return view('companies')->with('companies', $companies);
     }
 }

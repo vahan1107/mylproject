@@ -9,7 +9,7 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="c_name">Name</label>
-                <input type="text" class="form-control" id="c_name" name="c_name" placeholder="Name">
+                <input type="text" class="form-control" id="c_name" name="c_name" placeholder="Name" required>
             </div>
             <div class="form-group col-md-3">
                 <label for="c_email">Email</label>
