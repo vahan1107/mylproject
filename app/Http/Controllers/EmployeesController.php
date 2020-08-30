@@ -19,7 +19,6 @@ class EmployeesController extends Controller
 
     public function store(Request $request) {
         $input = $request->all();
-        print_r($input);
         DB::table('employees')->insert(
             array(
                 'first_name' => $input['ef_name'],
@@ -37,7 +36,6 @@ class EmployeesController extends Controller
         $employee = DB::table('employees')->where('id', $input['e_id'])->first();
         $companies = DB::table('companies')->get();
         $info = (object) array('employee' => $employee, 'companies' => $companies);
-        // print_r($info);
         return view('update_employee')->with('info', $info);
     }
 
