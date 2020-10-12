@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class EmployeesController extends Controller
 {
@@ -14,7 +14,7 @@ class EmployeesController extends Controller
 
     public function create() {
         $companies = DB::table('companies')->get();
-        return view('create_employee')->with('companies', $companies);;
+        return view('create_employee')->with('companies', $companies);
     }
 
     public function store(Request $request) {

@@ -29,7 +29,7 @@
                             <td><img src="{{asset('storage/'.$company->logo)}}" width="40"/></td>
                             <td><a href="{{$company->website}}" target="_blank">{{$company->name}}</a></td>
                             <td>
-                                <form action="/admin/companies/update" method="post">
+                                <form action="/admin/companies/update" method="get">
                                     @csrf
                                     <input type="hidden" name="c_id" value="{{$company->id}}">
                                     <input class="to_new_page" type="submit" value="Update">

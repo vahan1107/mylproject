@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Insert inforation about employee</h1>
-    <form enctype="multipart/form-data" method="POST" action="/admin/employees/save" class="m-3">
+    <form enctype="multipart/form-data" method="POST" action="/admin/employees/update" class="m-3">
         <input type="hidden" name="e_id" value="{{$info->employee->id}}">
         @csrf
         <div class="form-row">
@@ -42,7 +42,7 @@
                 </select>
             </div>
         </div>
-        <input type="submit" class="btn btn-primary" role="button" value="Create">
+        <input type="submit" class="btn btn-primary" role="button" value="Update">
     </form>
 </body>
 </html>

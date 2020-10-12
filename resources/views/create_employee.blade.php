@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Insert inforation about employee</h1>
-    <form enctype="multipart/form-data" method="POST" action="/admin/employees/store" class="m-3">
+    <form enctype="multipart/form-data" method="POST" action="/admin/employees/create" class="m-3">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-3">

@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Insert inforation about company</h1>
-    <form enctype="multipart/form-data" method="POST" action="/admin/companies/store" class="m-3">
+    <form enctype="multipart/form-data" method="POST" action="/admin/companies/create" class="m-3">
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="c_name">Name</label>

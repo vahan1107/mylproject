@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Update company inforation</h1>
-    <form enctype="multipart/form-data" method="POST" action="/admin/companies/save" class="m-3">
+    <form enctype="multipart/form-data" method="POST" action="/admin/companies/update" class="m-3">
         <input type="hidden" name="c_id" value="{{$company->id}}">
         <div class="form-row">
             <div class="form-group col-md-3">
@@ -26,7 +26,7 @@
             <label for="c_website">Website</label>
             <input type="text" class="form-control" id="c_website" name="c_website" placeholder="Website" value="{{$company->website}}">
         </div>
-        <input type="submit" class="btn btn-primary" role="button" value="Save">
+        <input type="submit" class="btn btn-primary" role="button" value="Update">
     </form>
 </body>
 </html>

@@ -31,7 +31,7 @@
                             <td>{{$employee->email}}</td>
                             <td>{{$employee->phone}}</td>
                             <td>
-                                <form action="/admin/employees/update" method="post">
+                                <form action="/admin/employees/update" method="get">
                                     @csrf
                                     <input type="hidden" name="e_id" value="{{$employee->id}}">
                                     <input class="to_new_page" type="submit" value="Update">
